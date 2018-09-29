@@ -28,14 +28,11 @@ function Paddle() {
     rect(this.x, this.y, this.width, this.height);
   }
 
-  // left 37
-  // right 39
-
   this.update = function() {
-    if (keyIsDown(37)) {
+    if (keyIsDown(LEFT_ARROW)) {
       paddle.moveLeft();
     }
-    if (keyIsDown(39)) {
+    if (keyIsDown(RIGHT_ARROW)) {
       paddle.moveRight();
     }
   }
