@@ -64,8 +64,8 @@ function Paddle() {
     if(hit) {
       ball.ySpeed *= -1;
       this.score++;
-      ball.ySpeed += random(-1,1)
-      ball.xSpeed += random(-1,1)
+      ball.ySpeed += random(0,1)
+      ball.xSpeed += random(0,1)
     }
   }
 }
@@ -98,13 +98,13 @@ function Ball() {
   this.bounce = function() {
     if(this.x < 0 || this.x > width) {
       this.xSpeed *= -1;
-      ball.xSpeed += random(-1,1)
-      ball.ySpeed += random(-1,1)
+      ball.xSpeed += random(0,1)
+      ball.ySpeed += random(0,1)
     }
     if(this.y < 0 || this.y > height) {
       this.ySpeed *= -1;
-      ball.xSpeed += random(-1,1)
-      ball.ySpeed += random(-1,1)
+      ball.xSpeed += random(0,1)
+      ball.ySpeed += random(0,1)
     }
     if(this.y > height) {
       paddle.score = 0;
